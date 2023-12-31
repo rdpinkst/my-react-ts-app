@@ -5,7 +5,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #610A20;
 }
 .color-name {
     margin: 0;
+    font-weight: 700;
 }
