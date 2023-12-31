@@ -1,0 +1,11 @@
+.color-tile {
+    width: 10rem;
+    height: 6rem;
+    border: 2px solid aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.color-name {
+    margin: 0;
+}
