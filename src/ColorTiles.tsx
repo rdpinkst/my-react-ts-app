@@ -1,11 +1,10 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import "./colorTiles.css"
 
 const HEXVALUES = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
 
 function ColorTiles() {
     const [color, setColor] = useState<string>("");
-    const windowRef = useRef<number[]>([window.innerHeight, window.innerWidth]) 
     
     const style = { 
         backgroundColor: color,
@@ -25,8 +24,16 @@ function ColorTiles() {
         setColor(val);
       }
 
+      function copyClipboard() {
+        navigator.clipboard.writeText(color).then(() => {
+            console.log("Copied to clipboard");
+        }).catch(() => {
+            console.log("Couldn't Copy to clipboard")
+        })
+      }
+
     return (
-        <div className="color-tile" style={style}>
+        <div onClick={copyClipboard} className="color-tile" style={style}>
             <p className="color-name">{color}</p>
         </div>
     )

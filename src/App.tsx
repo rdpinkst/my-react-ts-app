@@ -4,7 +4,7 @@ import ColorTiles from './ColorTiles'
 import './App.css'
 
 function App() {
-  const [tiles, setTiles] = useState<{}[]>([]);
+  const [tiles, setTiles] = useState<[]>([]);
 
   useEffect(() => {
     let arr = []
