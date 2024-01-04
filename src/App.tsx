@@ -4,7 +4,7 @@ import ColorTiles from './ColorTiles'
 import './App.css'
 
 function App() {
-  const [tiles, setTiles] = useState<[]>([]);
+  const [tiles, setTiles] = useState<JSX.Element[]>([]);
 
   useEffect(() => {
     let arr = []
@@ -13,6 +13,7 @@ function App() {
     }
     setTiles(arr);
   }, [])
+
 
 
   return (
