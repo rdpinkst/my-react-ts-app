@@ -1,9 +1,12 @@
 import "./titleTile.css"
 
-function TitleTile() {
+function TitleTile({createNewArray}) {
     return (
         <div className="container">
-            <h1>Color Picker</h1>
+            <button onClick={createNewArray}>
+               <h1>Color Picker</h1> 
+            </button>
+            
         </div>
     )
 }
