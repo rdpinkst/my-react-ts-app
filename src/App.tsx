@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <div className='tile-container'>
-        <TitleTile createNewArray ={createColorArray} />
+        <TitleTile onClick ={createColorArray} />
         {tiles.map((tile, index) => {
           return <ColorTiles color={tile} key={index} />
         })}
