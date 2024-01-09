@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
 import "./colorTiles.css"
 
-function ColorTiles({ color }) {
+type propType = {
+    color: string;
+}
+
+function ColorTiles({ color }: propType) {
     
     const style = { 
         backgroundColor: color,
     }
-
-
-    
 
       function copyClipboard() {
         navigator.clipboard.writeText(color).then(() => {
